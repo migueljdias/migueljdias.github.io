@@ -12,7 +12,6 @@
     <!-- Tailwind via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      // Tailwind config for colors and dark mode support
       tailwind.config = {
         darkMode: 'class',
         theme: {
@@ -47,7 +46,9 @@
       <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-0">
         <div class="flex items-center justify-between h-16">
           <a href="#home" class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-slate-800 to-indigo-600 flex items-center justify-center text-white font-semibold">MD</div>
+            <div class="w-10 h-10 rounded-lg overflow-hidden">
+              <img src="https://avatars.githubusercontent.com/u/14091229?v=4" alt="Miguel Dias" loading="lazy" class="w-10 h-10 rounded-full object-cover" />
+            </div>
             <div class="hidden sm:block">
               <span class="font-semibold">Miguel Dias</span>
               <div class="text-xs text-slate-500">Tech-meets-MBA</div>
@@ -59,7 +60,6 @@
             <a href="#work" class="text-slate-700 hover:text-slate-900">Experience</a>
             <a href="#contact" class="text-slate-700 hover:text-slate-900">Contact</a>
             <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-slate-200 text-sm hover:bg-slate-50">
-              <!-- LinkedIn icon (simple) -->
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-slate-700"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-12h4v2"/></svg>
               LinkedIn
             </a>
@@ -71,13 +71,11 @@
 
           <div class="md:hidden">
             <button id="menuBtn" aria-label="Toggle menu" class="p-2 rounded-md border border-slate-200">
-              <!-- menu icon -->
               <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
           </div>
         </div>
 
-        <!-- Mobile menu -->
         <div id="mobileMenu" class="hidden md:hidden py-3 border-t border-slate-200">
           <div class="flex flex-col gap-3">
             <a href="#about" class="py-1">About</a>
@@ -106,7 +104,6 @@
 
             <div class="mt-6 flex flex-wrap gap-3">
               <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-slate-900 text-white shadow hover:opacity-95">
-                <!-- LinkedIn icon small -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-12h4v2"/></svg>
                 Connect on LinkedIn
               </a>
@@ -123,18 +120,16 @@
           </div>
 
           <div class="md:col-span-5 reveal" data-reveal>
-            <div class="rounded-xl border border-slate-200 p-5 bg-white shadow">
-              <div class="flex items-start gap-4">
-                <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-indigo-600 to-slate-800 flex items-center justify-center text-white font-bold">MD</div>
-                <div>
-                  <div class="text-sm text-slate-500">Current</div>
-                  <div class="font-semibold">Account Executive — Ready Education</div>
-                  <div class="text-sm text-slate-500 mt-2">Driving adoption of transformative EdTech solutions—partnering with universities, CTOs, and executive teams.</div>
-                </div>
+            <div class="rounded-xl border border-slate-200 p-5 bg-white shadow flex gap-4 items-center">
+              <img src="https://avatars.githubusercontent.com/u/14091229?v=4" alt="Miguel Dias" loading="lazy" class="w-24 h-24 rounded-full object-cover" />
+              <div>
+                <div class="text-sm text-slate-500">Current</div>
+                <div class="font-semibold">Account Executive — Ready Education</div>
+                <div class="text-sm text-slate-500 mt-2">Driving adoption of transformative EdTech solutions—partnering with universities, CTOs, and executive teams.</div>
               </div>
-
-              <div class="mt-4 text-xs text-slate-500">Tri-lingual Brazilian native — Portuguese, English, Spanish.</div>
             </div>
+
+            <div class="mt-4 text-xs text-slate-500">Tri-lingual Brazilian native — Portuguese, English, Spanish.</div>
           </div>
         </div>
       </section>
@@ -296,7 +291,6 @@
       // Mobile menu toggle
       const menuBtn = document.getElementById('menuBtn');
       const mobileMenu = document.getElementById('mobileMenu');
-      const menuIcon = document.getElementById('menuIcon');
       let open = false;
       menuBtn && menuBtn.addEventListener('click', () => {
         open = !open;
