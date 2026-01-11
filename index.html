@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Miguel Dias — The Bridge Between Code and Commerce</title>
+    <meta name="description" content="Miguel Dias — Software Engineer turned Tech Sales Leader | McCombs MBA '27 | Building the future of EdTech at Ready Education." />
+
+    <!-- Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind config for colors and dark mode support
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+            colors: {
+              brand: {
+                50: '#eef6ff',
+                100: '#d8ecff',
+                300: '#66bdf6',
+                500: '#0ea5e9',
+                700: '#0369a1',
+                900: '#01435b'
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      :root { --bg: #0f1724; }
+      .gradient-text { background: linear-gradient(90deg,#0ea5e9,#7c3aed); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .reveal { transform: translateY(8px); opacity: 0; transition: all 420ms cubic-bezier(.2,.9,.2,1); }
+      .reveal.in { transform: translateY(0); opacity: 1; }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/75 backdrop-blur border-b border-slate-200">
+      <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-0">
+        <div class="flex items-center justify-between h-16">
+          <a href="#home" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-slate-800 to-indigo-600 flex items-center justify-center text-white font-semibold">MD</div>
+            <div class="hidden sm:block">
+              <span class="font-semibold">Miguel Dias</span>
+              <div class="text-xs text-slate-500">Tech-meets-MBA</div>
+            </div>
+          </a>
+
+          <nav id="nav" class="hidden md:flex items-center gap-6 text-sm">
+            <a href="#about" class="text-slate-700 hover:text-slate-900">About</a>
+            <a href="#work" class="text-slate-700 hover:text-slate-900">Experience</a>
+            <a href="#contact" class="text-slate-700 hover:text-slate-900">Contact</a>
+            <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-slate-200 text-sm hover:bg-slate-50">
+              <!-- LinkedIn icon (simple) -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-slate-700"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-12h4v2"/></svg>
+              LinkedIn
+            </a>
+            <a href="mailto:migueljoaodias@gmail.com" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-slate-200 text-sm hover:bg-slate-50">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-slate-700"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8.5v7.5A2 2 0 005 18h14a2 2 0 002-2V8.5M3 8.5L12 13l9-4.5"/></svg>
+              Email
+            </a>
+          </nav>
+
+          <div class="md:hidden">
+            <button id="menuBtn" aria-label="Toggle menu" class="p-2 rounded-md border border-slate-200">
+              <!-- menu icon -->
+              <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden py-3 border-t border-slate-200">
+          <div class="flex flex-col gap-3">
+            <a href="#about" class="py-1">About</a>
+            <a href="#work" class="py-1">Experience</a>
+            <a href="#contact" class="py-1">Contact</a>
+            <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="py-2 inline-flex items-center gap-2 rounded-md bg-slate-900 text-white px-3 w-max">LinkedIn</a>
+            <a href="mailto:migueljoaodias@gmail.com" class="py-2">Email</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-0 pt-10 pb-16">
+
+      <!-- Hero -->
+      <section id="home" class="pb-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-7 reveal" data-reveal>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+              <span class="gradient-text">The Bridge Between Code and Commerce.</span>
+            </h1>
+
+            <p class="mt-4 text-lg text-slate-700 max-w-2xl">
+              Software Engineer turned Tech Sales Leader | McCombs MBA '27 | Building the future of EdTech at Ready Education.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-slate-900 text-white shadow hover:opacity-95">
+                <!-- LinkedIn icon small -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-12h4v2"/></svg>
+                Connect on LinkedIn
+              </a>
+
+              <a href="mailto:migueljoaodias@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-slate-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-slate-700"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8.5v7.5A2 2 0 005 18h14a2 2 0 002-2V8.5M3 8.5L12 13l9-4.5"/></svg>
+                Email
+              </a>
+            </div>
+
+            <div class="mt-6 text-sm text-slate-500">
+              <strong class="text-slate-700">Keywords:</strong> Adaptable · Natural Leader · Curiosity-Driven
+            </div>
+          </div>
+
+          <div class="md:col-span-5 reveal" data-reveal>
+            <div class="rounded-xl border border-slate-200 p-5 bg-white shadow">
+              <div class="flex items-start gap-4">
+                <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-indigo-600 to-slate-800 flex items-center justify-center text-white font-bold">MD</div>
+                <div>
+                  <div class="text-sm text-slate-500">Current</div>
+                  <div class="font-semibold">Account Executive — Ready Education</div>
+                  <div class="text-sm text-slate-500 mt-2">Driving adoption of transformative EdTech solutions—partnering with universities, CTOs, and executive teams.</div>
+                </div>
+              </div>
+
+              <div class="mt-4 text-xs text-slate-500">Tri-lingual Brazilian native — Portuguese, English, Spanish.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unique Value -->
+      <section id="about" class="mt-8 reveal" data-reveal>
+        <div class="rounded-xl bg-white p-6 border border-slate-200 shadow-sm">
+          <h2 class="text-xl font-semibold">The Hybrid Edge</h2>
+          <p class="mt-3 text-slate-700">I combine an analytical, engineering mind with high-level relationship management and communication skills—positioning me uniquely to translate product capabilities into strategic business outcomes.</p>
+
+          <div class="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-4 border rounded-lg">
+              <div class="text-xs text-slate-500">Analytical</div>
+              <div class="font-semibold mt-1">Deep technical fluency</div>
+              <div class="text-sm text-slate-500 mt-2">Able to hold technical conversations with engineering leaders and map solutions to architecture and outcomes.</div>
+            </div>
+
+            <div class="p-4 border rounded-lg">
+              <div class="text-xs text-slate-500">Leadership</div>
+              <div class="font-semibold mt-1">Elected & operational</div>
+              <div class="text-sm text-slate-500 mt-2">VP of Networking, Graduate Business Council at McCombs—experienced in building communities and mobilizing teams.</div>
+            </div>
+
+            <div class="p-4 border rounded-lg">
+              <div class="text-xs text-slate-500">Communication</div>
+              <div class="font-semibold mt-1">Business-facing storyteller</div>
+              <div class="text-sm text-slate-500 mt-2">Skilled at translating technical value into commercial ROI for executives and stakeholders.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bento Grid -->
+      <section class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-slate-900 text-white flex items-center justify-center">{ }</div>
+            <div>
+              <div class="font-semibold">Analytical Brain</div>
+              <div class="text-sm text-slate-500 mt-1">Tech foundation that informs strategy; understands engineering constraints and translates them into product-led conversations.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-slate-900 text-white flex items-center justify-center">👥</div>
+            <div>
+              <div class="font-semibold">Leadership</div>
+              <div class="text-sm text-slate-500 mt-1">Elected leader at McCombs — experience building professional communities and leading cross-functional initiatives.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-slate-900 text-white flex items-center justify-center">📣</div>
+            <div>
+              <div class="font-semibold">Communication</div>
+              <div class="text-sm text-slate-500 mt-1">Adept at conveying technical value to executive stakeholders and aligning sales focus on measurable outcomes.</div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Experience -->
+      <section id="work" class="mt-10">
+        <h3 class="text-lg font-semibold">Experience Highlights</h3>
+
+        <div class="mt-4 space-y-6">
+          <div class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <div class="text-sm text-slate-500">Ready Education</div>
+                <div class="font-semibold">Account Executive — EdTech</div>
+              </div>
+              <div class="text-sm text-slate-400">Present</div>
+            </div>
+
+            <div class="mt-3 text-sm text-slate-600">Driving results across universities by aligning product outcomes with institutional goals and partnering closely with CTOs and campus execs.</div>
+
+            <div class="mt-4">
+              <div class="text-sm font-medium">Key Achievements (placeholder)</div>
+              <ul class="list-disc pl-5 mt-2 text-sm text-slate-600">
+                <li>Exceeded quota — details to add</li>
+                <li>Closed multi-year agreement with major university — details to add</li>
+                <li>Built strategic relationships across academic & technical stakeholders</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <div class="text-sm text-slate-500">Software Engineering Background</div>
+                <div class="font-semibold">Foundational technical experience</div>
+              </div>
+              <div class="text-sm text-slate-400">Earlier</div>
+            </div>
+
+            <div class="mt-3 text-sm text-slate-600">Built software and collaborated with engineering teams—this technical foundation enables credible, deep-dive conversations with CTOs and developers.</div>
+          </div>
+
+          <div class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <div class="text-sm text-slate-500">Leadership at McCombs (UT Austin)</div>
+                <div class="font-semibold">VP of Networking, Graduate Business Council</div>
+              </div>
+              <div class="text-sm text-slate-400">MBA '27</div>
+            </div>
+
+            <div class="mt-3 text-sm text-slate-600">Elected leadership role focused on community-building and creating high-value professional opportunities for the graduate community.</div>
+          </div>
+
+          <div class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <div class="text-sm text-slate-500">Languages & Global Perspective</div>
+                <div class="font-semibold">Brazilian · Portuguese · English · Spanish</div>
+              </div>
+              <div class="text-sm text-slate-400">Global</div>
+            </div>
+
+            <div class="mt-3 text-sm text-slate-600">Tri-lingual background and global adaptability—useful when selling to international institutions or cross-cultural teams.</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="border-t border-slate-200 bg-white">
+      <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-0 py-8">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div>
+            <div class="font-semibold">Miguel Dias</div>
+            <div class="text-sm text-slate-500 mt-2">I am a high-impact leader sitting at the intersection of technical excellence and business strategy. With a foundation in Software Engineering and a current track record as an Account Executive at Ready Education, I specialize in translating complex technical solutions into tangible business value. Currently pursuing my MBA at McCombs (Class of 2027), I serve as the VP of Networking for the Graduate Business Council—a role that reflects my commitment to building communities and fostering high-value professional relationships. I am a tri-lingual Brazilian native, driven by an insatiable curiosity and a passion for leading teams that deliver world-class results.</div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-slate-700"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-12h4v2"/></svg>
+              LinkedIn
+            </a>
+
+            <a href="mailto:migueljoaodias@gmail.com" class="inline-flex items-center gap-2 text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-slate-700"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8.5v7.5A2 2 0 005 18h14a2 2 0 002-2V8.5M3 8.5L12 13l9-4.5"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-6 text-xs text-slate-400">© 2026 Miguel Dias — The Bridge Between Code and Commerce.</div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      let open = false;
+      menuBtn && menuBtn.addEventListener('click', () => {
+        open = !open;
+        mobileMenu.classList.toggle('hidden', !open);
+      });
+
+      // Reveal on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('in');
+        });
+      }, { threshold: 0.06 });
+      document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+    </script>
+  </body>
+</html>
