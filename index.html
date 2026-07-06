@@ -1,308 +1,1007 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Miguel Dias — The Competitive Advantage for Tech-Driven Business</title>
-    <meta name="description" content="Miguel Dias — Software Engineer turned Tech Sales Leader | McCombs MBA '27 | Building the future of EdTech at Ready Education." />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miguel Dias — Enterprise Tech Leader & Corporate Strategist</title>
+  <meta name="description" content="Enterprise Tech Leader bridging strategy, execution, and technical expertise. MBA Candidate at UT Austin McCombs. Cross-functional business leader specializing in GTM strategy and revenue operations.">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <!-- Inter font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    :root {
+      --primary: #0f172a;
+      --primary-light: #1e293b;
+      --accent: #0ea5e9;
+      --accent-dark: #0284c7;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-tertiary: #94a3b8;
+      --border: #e2e8f0;
+      --bg-light: #f8fafc;
+      --bg-white: #ffffff;
+      --success: #10b981;
+    }
 
-    <!-- Tailwind via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
-            colors: {
-              brand: {
-                50: '#eef6ff',
-                100: '#d8ecff',
-                300: '#66bdf6',
-                500: '#0ea5e9',
-                700: '#0369a1',
-                900: '#01435b'
-              }
-            }
-          }
-        }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* Typography */
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 1rem;
       }
-    </script>
+    }
 
-    <style>
-      :root { --bg: #0f1724; }
-      .gradient-text { background: linear-gradient(90deg,#0ea5e9,#7c3aed); -webkit-background-clip: text; background-clip: text; color: transparent; }
-      .reveal { transform: translateY(8px); opacity: 0; transition: all 420ms cubic-bezier(.2,.9,.2,1); }
-      .reveal.in { transform: translateY(0); opacity: 1; }
-    </style>
-  </head>
-  <body class="bg-slate-50 text-slate-900 antialiased">
+    /* Header / Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
 
-    <!-- Header -->
-    <header class="sticky top-0 z-40 bg-white/75 backdrop-blur border-b border-slate-200">
-      <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-0">
-        <div class="flex items-center justify-between h-16">
-          <a href="#home" class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg overflow-hidden">
-              <img src="https://avatars.githubusercontent.com/u/14091229?v=4" alt="Miguel Dias" loading="lazy" class="w-10 h-10 rounded-full object-cover" />
-            </div>
-            <div class="hidden sm:block">
-              <span class="font-semibold">Miguel Dias</span>
-              <div class="text-xs text-slate-500">Tech-meets-MBA</div>
-            </div>
-          </a>
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4rem;
+      padding: 0 1.5rem;
+    }
 
-          <nav id="nav" class="hidden md:flex items-center gap-6 text-sm">
-            <a href="#about" class="text-slate-700 hover:text-slate-900">About</a>
-            <a href="#work" class="text-slate-700 hover:text-slate-900">Experience</a>
-            <a href="#contact" class="text-slate-700 hover:text-slate-900">Contact</a>
-            <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-slate-200 text-sm hover:bg-slate-50">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-slate-700"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-12h4v2"/></svg>
-              LinkedIn
-            </a>
-            <a href="mailto:migueljoaodias@gmail.com" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-slate-200 text-sm hover:bg-slate-50">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-slate-700"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8.5v7.5A2 2 0 005 18h14a2 2 0 002-2V8.5M3 8.5L12 13l9-4.5"/></svg>
-              Email
-            </a>
-          </nav>
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
 
-          <div class="md:hidden">
-            <button id="menuBtn" aria-label="Toggle menu" class="p-2 rounded-md border border-slate-200">
-              <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
+    .avatar {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.625rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-secondary);
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--bg-light);
+      border-color: var(--text-secondary);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 0.4rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .menu-toggle span {
+      width: 1.25rem;
+      height: 2px;
+      background-color: var(--primary);
+      border-radius: 1px;
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        padding: 1rem;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    section + section {
+      margin-top: 5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      padding: 2rem 0;
+    }
+
+    .hero-content h1 {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .hero-card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-card-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .personal-note {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-style: italic;
+      color: var(--text-tertiary);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .hero-image {
+        order: -1;
+      }
+    }
+
+    /* About / Summary Section */
+    .about-section {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 2rem;
+    }
+
+    .about-section h2 {
+      margin-bottom: 1rem;
+    }
+
+    .about-section > p {
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+    }
+
+    /* Experience Section */
+    .experience-item {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .experience-item:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .experience-company {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .experience-role {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .experience-dates {
+      font-size: 0.9rem;
+      color: var(--text-tertiary);
+      text-align: right;
+    }
+
+    .experience-description {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .experience-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .metric {
+      padding: 0.75rem;
+      background: var(--bg-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0.25rem;
+    }
+
+    .metric-label {
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .metric-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    @media (max-width: 640px) {
+      .experience-header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .experience-dates {
+        text-align: left;
+      }
+
+      .experience-metrics {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Education Section */
+    .education {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .education-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+    }
+
+    .education-school {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .education-degree {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .education-year {
+      font-size: 0.9rem;
+      color: var(--text-tertiary);
+    }
+
+    @media (max-width: 640px) {
+      .education {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .skill-category {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+    }
+
+    .skill-category-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .skill-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background: var(--bg-light);
+      color: var(--primary);
+      border: 1px solid var(--border);
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Section Headers */
+    .section-header {
+      margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+      position: relative;
+      padding-bottom: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 3rem;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+      border-radius: 2px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 5rem;
+      padding: 3rem 0;
+      border-top: 1px solid var(--border);
+      background: var(--bg-white);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-info {
+      max-width: 50%;
+    }
+
+    .footer-info h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-info p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+
+    .footer-link:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-tertiary);
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      footer {
+        padding: 2rem 0;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-info {
+        max-width: 100%;
+      }
+
+      .footer-links {
+        width: 100%;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .fade-in-delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .fade-in-delay-2 {
+      animation-delay: 0.2s;
+    }
+
+    .fade-in-delay-3 {
+      animation-delay: 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#home" class="logo">
+          <img src="https://avatars.githubusercontent.com/u/14091229?v=4" alt="Miguel Dias" class="avatar">
+          <span>Miguel Dias</span>
+        </a>
+        
+        <nav id="nav" class="nav-menu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <div class="nav-buttons">
+            <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="btn btn-secondary">LinkedIn</a>
+            <a href="mailto:migueljoaodias@gmail.com" class="btn btn-primary">Email</a>
           </div>
+        </nav>
+
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero fade-in">
+      <div class="hero-content">
+        <h1>Enterprise Tech Leader | Corporate Strategist | Revenue Operator</h1>
+        <p class="hero-tagline">
+          Bridging strategy, execution, and technical expertise at the intersection of enterprise technology and business growth. I orchestrate value-driven sales cycles, build cross-functional alignment, and translate complex technical architecture into measurable revenue outcomes.
+        </p>
+        <div class="hero-actions">
+          <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="btn btn-primary">Connect on LinkedIn</a>
+          <a href="mailto:migueljoaodias@gmail.com" class="btn btn-secondary">Get in Touch</a>
         </div>
-
-        <div id="mobileMenu" class="hidden md:hidden py-3 border-t border-slate-200">
-          <div class="flex flex-col gap-3">
-            <a href="#about" class="py-1">About</a>
-            <a href="#work" class="py-1">Experience</a>
-            <a href="#contact" class="py-1">Contact</a>
-            <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="py-2 inline-flex items-center gap-2 rounded-md bg-slate-900 text-white px-3 w-max">LinkedIn</a>
-            <a href="mailto:migueljoaodias@gmail.com" class="py-2">Email</a>
-          </div>
+        <div class="personal-note">
+          👨‍👩‍👧 Outside of work, I'm a husband, girl dad, and proud first-generation Latino leader
         </div>
       </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-0 pt-10 pb-16">
-
-      <!-- Hero -->
-      <section id="home" class="pb-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          <div class="md:col-span-7 reveal" data-reveal>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
-              <span class="gradient-text">The Competitive Advantage for Tech-Driven Business</span>
-            </h1>
-
-            <p class="mt-4 text-lg text-slate-700 max-w-2xl">
-              Account Executive with a Software Engineering pedigree. Driven by curiosity, elected leader at McCombs, and tri-lingual communicator focused on scaling global results.
-            </p>
-
-            <div class="mt-6 flex flex-wrap gap-3">
-              <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-slate-900 text-white shadow hover:opacity-95">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-12h4v2"/></svg>
-                Connect on LinkedIn
-              </a>
-
-              <a href="mailto:migueljoaodias@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-slate-200">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-slate-700"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8.5v7.5A2 2 0 005 18h14a2 2 0 002-2V8.5M3 8.5L12 13l9-4.5"/></svg>
-                Email
-              </a>
-            </div>
-
-            <div class="mt-6 text-sm text-slate-500">
-              <strong class="text-slate-700">Strategic Strengths:</strong> Adaptable · Natural Leader · Curiosity-Driven
-            </div>
+      <div class="hero-image">
+        <div class="hero-card">
+          <div class="hero-card-title">Sr. Account Executive</div>
+          <div class="hero-card-desc">
+            "CEO of the Territory" — orchestrating cross-functional GTM strategy, pipeline velocity, and revenue outcomes for enterprise cloud migrations and digital transformation initiatives.
           </div>
-
-          <div class="md:col-span-5 reveal" data-reveal>
-            <div class="rounded-xl border border-slate-200 p-5 bg-white shadow flex gap-4 items-center">
-              <img src="https://avatars.githubusercontent.com/u/14091229?v=4" alt="Miguel Dias" loading="lazy" class="w-24 h-24 rounded-full object-cover" />
-              <div>
-                <div class="font-semibold">Account Executive</div>
-                <div class="text-sm text-slate-500 mt-2">High-growth Account Executive with a track record of navigating complex sales cycles. I combine technical fluency with a relentless focus on delivering revenue and solving institutional problems.</div>
-              </div>
-            </div>
-
-            <div class="mt-4 text-xs text-slate-500">Tri-lingual Brazilian native — Portuguese, English, Spanish.</div>
-          </div>
+          <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-tertiary);">
+            <strong>Based in:</strong> Austin, TX<br>
+            <strong>Expertise:</strong> Enterprise Sales, GTM Strategy, SaaS Architecture
+          </p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Unique Value -->
-      <section id="about" class="mt-8 reveal" data-reveal>
-        <div class="rounded-xl bg-white p-6 border border-slate-200 shadow-sm">
-          <h2 class="text-xl font-semibold">The Hybrid Edge</h2>
-          <p class="mt-3 text-slate-700">I combine an analytical, engineering mind with high-level relationship management and communication skills—positioning me uniquely to translate product capabilities into strategic business outcomes.</p>
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-section fade-in">
+        <h2>The Hybrid Edge</h2>
+        <p>
+          I combine deep technical fluency with strategic business acumen and relationship mastery. My unique positioning allows me to operate effectively across the enterprise—translating engineering constraints into competitive advantages, building executive alignment across siloed teams, and driving revenue through credible, value-engineered solutions.
+        </p>
+        <p>
+          My foundation spans <strong>Software Engineering</strong>, <strong>MBA Strategy</strong>, and <strong>Enterprise Sales</strong>. I've held technical architect roles where I partnered with engineering teams on product roadmaps, played individual contributor in sales where I closed seven-figure deals, and led cross-functional initiatives in MBA leadership roles. This breadth enables me to see around corners—anticipating technical objections before they arise, architecting GTM plays that account for engineering constraints, and building trust with the CTO, CFO, and CEO in the same boardroom.
+        </p>
+      </div>
+    </section>
 
-          <div class="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="p-4 border rounded-lg">
-              <div class="text-xs text-slate-500">Analytical</div>
-              <div class="font-semibold mt-1">Deep technical fluency</div>
-              <div class="text-sm text-slate-500 mt-2">Able to hold technical conversations with engineering leaders and map solutions to architecture and outcomes.</div>
-            </div>
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="section-header">
+        <h2>Experience & Impact</h2>
+      </div>
 
-            <div class="p-4 border rounded-lg">
-              <div class="text-xs text-slate-500">Leadership</div>
-              <div class="font-semibold mt-1">Elected & operational</div>
-              <div class="text-sm text-slate-500 mt-2">VP of Networking, Graduate Business Council at McCombs—experienced in building communities and mobilizing teams.</div>
-            </div>
-
-            <div class="p-4 border rounded-lg">
-              <div class="text-xs text-slate-500">Communication</div>
-              <div class="font-semibold mt-1">Business-facing storyteller</div>
-              <div class="text-sm text-slate-500 mt-2">Skilled at translating technical value into commercial ROI for executives and stakeholders.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Bento Grid -->
-      <section class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <article class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-lg bg-slate-900 text-white flex items-center justify-center">{ }</div>
-            <div>
-              <div class="font-semibold">Analytical Brain</div>
-              <div class="text-sm text-slate-500 mt-1">Tech foundation that informs strategy; understands engineering constraints and translates them into product-led conversations.</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-lg bg-slate-900 text-white flex items-center justify-center">👥</div>
-            <div>
-              <div class="font-semibold">Leadership</div>
-              <div class="text-sm text-slate-500 mt-1">Elected leader at McCombs — experience building professional communities and leading cross-functional initiatives.</div>
-            </div>
-          </div>
-        </article>
-
-        <article class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-lg bg-slate-900 text-white flex items-center justify-center">📣</div>
-            <div>
-              <div class="font-semibold">Communication</div>
-              <div class="text-sm text-slate-500 mt-1">Adept at conveying technical value to executive stakeholders and aligning sales focus on measurable outcomes.</div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <!-- Experience -->
-      <section id="work" class="mt-10">
-        <h3 class="text-lg font-semibold">Experience Highlights</h3>
-
-        <div class="mt-4 space-y-6">
-          <div class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <div class="text-sm text-slate-500">Ready Education</div>
-                <div class="font-semibold">Account Executive — EdTech</div>
-              </div>
-              <div class="text-sm text-slate-400">Present</div>
-            </div>
-
-            <div class="mt-3 text-sm text-slate-600">Driving results across universities by aligning product outcomes with institutional goals and partnering closely with CTOs and campus execs.</div>
-
-            <div class="mt-4">
-              <div class="text-sm font-medium">Key Achievements (placeholder)</div>
-              <ul class="list-disc pl-5 mt-2 text-sm text-slate-600">
-                <li>Exceeded quota — details to add</li>
-                <li>Closed multi-year agreement with major university — details to add</li>
-                <li>Built strategic relationships across academic & technical stakeholders</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <div class="text-sm text-slate-500">Software Engineering Background</div>
-                <div class="font-semibold">Foundational technical experience</div>
-              </div>
-              <div class="text-sm text-slate-400">Earlier</div>
-            </div>
-
-            <div class="mt-3 text-sm text-slate-600">Built software and collaborated with engineering teams—this technical foundation enables credible, deep-dive conversations with CTOs and developers.</div>
-          </div>
-
-          <div class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <div class="text-sm text-slate-500">Leadership at McCombs (UT Austin)</div>
-                <div class="font-semibold">VP of Networking, Graduate Business Council</div>
-              </div>
-              <div class="text-sm text-slate-400">MBA '27</div>
-            </div>
-
-            <div class="mt-3 text-sm text-slate-600">Elected leadership role focused on community-building and creating high-value professional opportunities for the graduate community.</div>
-          </div>
-
-          <div class="rounded-xl p-5 bg-white border border-slate-200 shadow-sm reveal" data-reveal>
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <div class="text-sm text-slate-500">Languages & Global Perspective</div>
-                <div class="font-semibold">Brazilian · Portuguese · English · Spanish</div>
-              </div>
-              <div class="text-sm text-slate-400">Global</div>
-            </div>
-
-            <div class="mt-3 text-sm text-slate-600">Tri-lingual background and global adaptability—useful when selling to international institutions or cross-cultural teams.</div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer id="contact" class="border-t border-slate-200 bg-white">
-      <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-0 py-8">
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div class="experience-item fade-in fade-in-delay-1">
+        <div class="experience-header">
           <div>
-            <div class="font-semibold">Miguel Dias</div>
-            <div class="text-sm text-slate-500 mt-2">I am a high-impact leader sitting at the intersection of technical excellence and business strategy. With a foundation in Software Engineering and a current track record as an Account Executive at Ready Education, I specialize in translating complex technical solutions into tangible business value. Currently pursuing my MBA at McCombs (Class of 2027), I serve as the VP of Networking for the Graduate Business Council—a role that reflects my commitment to building communities and fostering high-value professional relationships. I am a tri-lingual Brazilian native, driven by an insatiable curiosity and a passion for leading teams that deliver world-class results.</div>
+            <div class="experience-company">Thesis</div>
+            <div class="experience-role">Sr. Account Executive</div>
           </div>
+          <div class="experience-dates">March 2026 — Present</div>
+        </div>
+        <p class="experience-description">
+          "CEO of the Territory" driving GTM strategy, pipeline velocity, and cross-functional alignment for enterprise cloud migrations and digital transformation.
+        </p>
+        <div class="experience-metrics">
+          <div class="metric">
+            <div class="metric-label">Focus</div>
+            <div class="metric-value">Territory Strategy & Execution</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Key Initiatives</div>
+            <div class="metric-value">Cloud Migration GTM</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Collaboration</div>
+            <div class="metric-value">Cross-functional Product/Eng Alignment</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Expertise</div>
+            <div class="metric-value">Enterprise SaaS, Value Engineering</div>
+          </div>
+        </div>
+      </div>
 
-          <div class="flex items-center gap-4">
-            <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-slate-700"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-12h4v2"/></svg>
-              LinkedIn
-            </a>
+      <div class="experience-item fade-in fade-in-delay-2">
+        <div class="experience-header">
+          <div>
+            <div class="experience-company">Ready Education</div>
+            <div class="experience-role">Account Executive</div>
+          </div>
+          <div class="experience-dates">April 2024 — March 2026</div>
+        </div>
+        <p class="experience-description">
+          Secured largest enterprise transaction in company history and ranked #1 rookie and #2 globally in first full year. Drove revenue growth through deep institutional partnerships and value-engineered solutions for academic enterprises.
+        </p>
+        <div class="experience-metrics">
+          <div class="metric">
+            <div class="metric-label">Achievement</div>
+            <div class="metric-value">Largest Enterprise Deal in Company History</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">First Year Ranking</div>
+            <div class="metric-value">#1 Rookie, #2 Globally</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Focus</div>
+            <div class="metric-value">Enterprise EdTech & Digital Transformation</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Specialization</div>
+            <div class="metric-value">University CTOs & Executive Buyers</div>
+          </div>
+        </div>
+      </div>
 
-            <a href="mailto:migueljoaodias@gmail.com" class="inline-flex items-center gap-2 text-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="text-slate-700"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8.5v7.5A2 2 0 005 18h14a2 2 0 002-2V8.5M3 8.5L12 13l9-4.5"/></svg>
-              Email
-            </a>
+      <div class="experience-item fade-in fade-in-delay-3">
+        <div class="experience-header">
+          <div>
+            <div class="experience-company">Anthology</div>
+            <div class="experience-role">Solutions Engineer</div>
+          </div>
+          <div class="experience-dates">September 2020 — March 2024</div>
+        </div>
+        <p class="experience-description">
+          Technical architect and trusted advisor bridging customer success, product vision, and engineering feasibility. Built deep cross-functional partnerships across product, engineering, and go-to-market teams. Architected solutions for enterprise cloud migrations and complex integrations.
+        </p>
+        <div class="experience-metrics">
+          <div class="metric">
+            <div class="metric-label">Expertise</div>
+            <div class="metric-value">SaaS Architecture & Cloud Migrations</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Strength</div>
+            <div class="metric-value">Cross-Functional Partnership</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Impact</div>
+            <div class="metric-value">Product Roadmap Influence</div>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Depth</div>
+            <div class="metric-value">Enterprise SaaS Platform (ERP, HR Tech)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="experience-company">TOTVS</div>
+            <div class="experience-role">Software Engineer & IT Leadership</div>
+          </div>
+          <div class="experience-dates">2017 — 2020</div>
+        </div>
+        <p class="experience-description">
+          Built software solutions and managed IT infrastructure at Latin America's largest ERP platform company. Developed full-stack applications and led cross-functional engineering initiatives.
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="experience-company">BMW Manufacturing & BMW Brazil</div>
+            <div class="experience-role">Engineering & IT Roles</div>
+          </div>
+          <div class="experience-dates">2014 — 2017</div>
+        </div>
+        <p class="experience-description">
+          Software engineer and systems architect supporting global manufacturing and operations. Built automation tools and enterprise infrastructure for automotive manufacturing operations. Gained firsthand experience in global enterprise environments.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <div class="section-header">
+        <h2>Education</h2>
+      </div>
+
+      <div class="education">
+        <div class="education-card fade-in fade-in-delay-1">
+          <div class="education-school">UT Austin McCombs</div>
+          <div class="education-degree">MBA</div>
+          <div class="education-year">2025 — 2027 (In Progress)</div>
+          <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">
+            Strategic leadership track. Elected VP of Networking for Graduate Business Council. Focus: Corporate Strategy, Enterprise Operations, and cross-functional leadership.
+          </p>
+        </div>
+
+        <div class="education-card fade-in fade-in-delay-2">
+          <div class="education-school">Univille</div>
+          <div class="education-degree">BS in Software Engineering</div>
+          <div class="education-year">Completed</div>
+          <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-secondary);">
+            Full-stack software engineering with focus on systems architecture and enterprise applications.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="section-header">
+        <h2>Skills & Expertise</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category fade-in fade-in-delay-1">
+          <div class="skill-category-title">📊 Strategy & GTM Operations</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Enterprise Strategy</span>
+            <span class="skill-tag">Territory Management</span>
+            <span class="skill-tag">GTM Strategy</span>
+            <span class="skill-tag">Value Engineering</span>
+            <span class="skill-tag">Pipeline Velocity</span>
+            <span class="skill-tag">Revenue Operations</span>
+            <span class="skill-tag">Cross-Functional Alignment</span>
+            <span class="skill-tag">Deal Architecture</span>
           </div>
         </div>
 
-        <div class="mt-6 text-xs text-slate-400">© 2026 Miguel Dias — The Competitive Advantage for Tech-Driven Business.</div>
+        <div class="skill-category fade-in fade-in-delay-2">
+          <div class="skill-category-title">🛠️ Technical & Product</div>
+          <div class="skill-tags">
+            <span class="skill-tag">SaaS Architecture</span>
+            <span class="skill-tag">Cloud Migrations</span>
+            <span class="skill-tag">Software Engineering</span>
+            <span class="skill-tag">Enterprise Systems</span>
+            <span class="skill-tag">Product Strategy</span>
+            <span class="skill-tag">Technical Leadership</span>
+            <span class="skill-tag">Systems Design</span>
+            <span class="skill-tag">Full-Stack Development</span>
+          </div>
+        </div>
+
+        <div class="skill-category fade-in fade-in-delay-3">
+          <div class="skill-category-title">🌍 Languages & Global</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Portuguese (Native)</span>
+            <span class="skill-tag">English (Native)</span>
+            <span class="skill-tag">Spanish (Fluent)</span>
+            <span class="skill-tag">Global Operations</span>
+            <span class="skill-tag">Cross-Cultural Leadership</span>
+          </div>
+        </div>
       </div>
-    </footer>
+    </section>
 
-    <script>
-      // Mobile menu toggle
-      const menuBtn = document.getElementById('menuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      let open = false;
-      menuBtn && menuBtn.addEventListener('click', () => {
-        open = !open;
-        mobileMenu.classList.toggle('hidden', !open);
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Miguel Dias</h3>
+          <p>
+            Enterprise tech leader bridging strategy, execution, and technical expertise. Currently Sr. Account Executive at Thesis. MBA Candidate at UT Austin McCombs. Always exploring the intersection of corporate strategy and revenue operations.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/migueljdias/" target="_blank" rel="noreferrer" class="footer-link">
+            <span>💼</span> LinkedIn
+          </a>
+          <a href="mailto:migueljoaodias@gmail.com" class="footer-link">
+            <span>✉️</span> Email
+          </a>
+          <a href="https://github.com/migueljdias" target="_blank" rel="noreferrer" class="footer-link">
+            <span>💻</span> GitHub
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Miguel Dias. Crafted with intention for impact.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      
+      // Animate hamburger
+      const spans = menuToggle.querySelectorAll('span');
+      if (nav.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translate(10px, 10px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(8px, -8px)';
+      } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
+    });
+
+    // Close menu when link clicked
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        const spans = menuToggle.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
       });
+    });
+  </script>
 
-      // Reveal on scroll
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add('in');
-        });
-      }, { threshold: 0.06 });
-      document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
-    </script>
-  </body>
+</body>
 </html>
