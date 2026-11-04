@@ -45,11 +45,17 @@ nav a:hover{color:var(--ink)}
 #theme{font:inherit;background:none;border:1px solid var(--line);color:var(--ink);padding:.3rem .7rem;border-radius:99px;cursor:pointer}
 #theme:hover{border-color:var(--accent)}
 
-.hero{padding-block:clamp(3rem,9vw,7rem) clamp(3rem,7vw,5rem)}
+.hero{padding-block:clamp(2.5rem,8vw,6rem) clamp(3rem,7vw,5rem);display:grid;gap:2.5rem;align-items:start}
+@media(min-width:60rem){.hero{grid-template-columns:minmax(0,1fr) 22rem;gap:3.5rem}.portrait{margin-top:3.6rem}}
+.hero-text{min-width:0}
+.portrait{margin:0;max-width:22rem;width:100%;position:relative;isolation:isolate}
+.portrait img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:.35rem;background:var(--surface)}
+.portrait::after{content:"";position:absolute;inset:0;transform:translate(-.75rem,.75rem);border:1.5px solid var(--accent);border-radius:.35rem;z-index:-1}
+@media(max-width:59.99rem){.portrait{max-width:18rem}}
 .status{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.8125rem;color:var(--muted);margin:0 0 2rem}
 .status i{width:.55rem;height:.55rem;border-radius:50%;background:var(--accent);animation:pulse 2.4s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 var(--accent)}70%,100%{box-shadow:0 0 0 .6rem transparent}}
-h1{font-family:var(--display);font-weight:800;margin:0;font-size:clamp(3.6rem,15vw,11.5rem);line-height:.88;letter-spacing:-.045em;font-variation-settings:"opsz" 96}
+h1{font-family:var(--display);font-weight:800;margin:0;font-size:clamp(3.6rem,14vw,9.5rem);line-height:.88;letter-spacing:-.045em;font-variation-settings:"opsz" 96}
 h1 span{display:block}
 h1 .dim{color:transparent;-webkit-text-stroke:1.5px var(--ink)}
 .role-line{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,3.6vw,2.6rem);letter-spacing:-.025em;line-height:1.15;margin:2.5rem 0 0;max-width:46rem;text-wrap:balance}
@@ -113,6 +119,7 @@ footer{border-top:1px solid var(--line);padding-block:1.75rem 2.5rem;font-family
 
   <main>
     <div class="hero">
+      <div class="hero-text">
       <p class="status"><i></i>Sr. Account Executive at Thesis</p>
       <h1><span>Miguel</span><span class="dim">Dias</span></h1>
       <p class="role-line">Sales professional who <em>translates technical depth</em> into enterprise revenue.</p>
@@ -126,6 +133,8 @@ footer{border-top:1px solid var(--line);padding-block:1.75rem 2.5rem;font-family
         <a class="btn primary" href="#experience">See the track record</a>
         <a class="btn" href="#contact">Get in touch</a>
       </div>
+      </div>
+      <figure class="portrait"><img src="assets/miguel.webp" width="880" height="1100" alt="Portrait of Miguel Dias in a blue blazer with a Longhorn lapel pin" fetchpriority="high"></figure>
     </div>
 
     <section id="about" class="about">
