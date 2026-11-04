@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dias Burnt Orange</title>
+<title>Miguel Dias</title>
 <meta name="description" content="Miguel Dias: enterprise sales and solutions engineering, MBA candidate at UT Austin McCombs.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -10,7 +10,7 @@ body{margin:0;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antial
 img{max-width:100%}a{color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-:root{--bg:#FFFFFF;--fg:#1E1E1E;--mute:#5D5D5D;--line:#E3DED8;--accent:#BF5700;--hero:#BF5700;--herofg:#FFFFFF;--card:#FBF8F5;color-scheme:light}@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1A1816;--fg:#F0ECE8;--mute:#ABA49C;--line:#37322D;--accent:#F08A3C;--hero:#BF5700;--herofg:#FFFFFF;--card:#221F1C;color-scheme:dark}}:root[data-theme=dark]{--bg:#1A1816;--fg:#F0ECE8;--mute:#ABA49C;--line:#37322D;--accent:#F08A3C;--hero:#BF5700;--herofg:#FFFFFF;--card:#221F1C;color-scheme:dark}
+:root{--bg:#FFFFFF;--fg:#1E1E1E;--mute:#5D5D5D;--line:#DCE4F7;--accent:#1D4FE0;--hero:#1D4FE0;--herofg:#FFFFFF;--card:#F4F7FE;color-scheme:light}:root[data-theme=dark]{--bg:#0D1424;--fg:#E8EEFA;--mute:#9DAECB;--line:#243257;--accent:#7FA6FF;--hero:#1D4FE0;--herofg:#FFFFFF;--card:#151F38;color-scheme:dark}
 body{font-family:'Public Sans',system-ui,sans-serif;font-size:1.0625rem;line-height:1.65}
 .in{max-width:70rem;margin:0 auto;padding-inline:max(1.25rem,env(safe-area-inset-left,0px)) max(1.25rem,env(safe-area-inset-right,0px))}
 .hero{background:var(--hero);color:var(--herofg)}
@@ -78,5 +78,5 @@ footer{padding-block:2rem 3rem;color:var(--mute);font-size:.9375rem}
 <script>
 var r=document.documentElement;var b=document.getElementById('theme');
 try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s)}catch(e){}
-if(b)b.addEventListener('click',function(){var t=r.getAttribute('data-theme');var d=t?t==='dark':matchMedia('(prefers-color-scheme:dark)').matches;var n=d?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}});
+if(b)b.addEventListener('click',function(){var t=r.getAttribute('data-theme');var d=t?t==='dark':false;var n=d?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}});
 </script></body></html>
